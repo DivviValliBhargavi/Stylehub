@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StyleHub — Redefine Your Wardrobe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+ 
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">Style<span>Hub</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#women" class="nav-link">Women</a></li>
+        <li><a href="#kids" class="nav-link">Kids</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="cart-btn" id="cartBtn" aria-label="Cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+ 
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Your Bag</h3>
+      <button class="close-cart" id="closeCart">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <p>Your bag is empty</p>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">₹0</span>
+      </div>
+      <button class="btn-checkout">Proceed to Checkout</button>
+    </div>
+  </div>
+ 
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-blob blob-1"></div>
+      <div class="hero-blob blob-2"></div>
+      <div class="hero-blob blob-3"></div>
+    </div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">New Season 2025</span>
+      <h1 class="hero-title">Dress the<br><em>Story</em><br>You're Living</h1>
+      <p class="hero-sub">Curated fashion for every chapter — women, kids, and the moments in between.</p>
+      <div class="hero-cta">
+        <a href="#women" class="btn-primary">Shop Women</a>
+        <a href="#kids" class="btn-ghost">Shop Kids</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card hc-1">
+        <div class="hc-img" style="background: linear-gradient(135deg,#e8d5c4,#c9a882)">
+          <svg viewBox="0 0 120 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="60" cy="45" rx="22" ry="22" fill="#a07850" opacity=".7"/>
+            <path d="M20 160 Q30 90 60 80 Q90 90 100 160Z" fill="#a07850" opacity=".5"/>
+            <path d="M35 100 Q40 90 60 85 Q80 90 85 100 L90 130 Q60 140 30 130Z" fill="#7a5c3a" opacity=".6"/>
+          </svg>
+        </div>
+        <p>Women's Edit</p>
+      </div>
+      <div class="hero-card hc-2">
+        <div class="hc-img" style="background: linear-gradient(135deg,#d4e8f0,#8abfd4)">
+          <svg viewBox="0 0 120 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="60" cy="40" rx="16" ry="16" fill="#3a7ea3" opacity=".6"/>
+            <path d="M30 160 Q40 100 60 90 Q80 100 90 160Z" fill="#3a7ea3" opacity=".4"/>
+            <path d="M40 100 Q50 93 60 90 Q70 93 80 100 L83 125 Q60 132 37 125Z" fill="#1a5f80" opacity=".5"/>
+          </svg>
+        </div>
+        <p>Kids' World</p>
+      </div>
+      <div class="hero-badge">
+        <span class="badge-num">2K+</span>
+        <span class="badge-text">Styles</span>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+ 
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>New Arrivals</span><span>·</span>
+      <span>Sustainable Fashion</span><span>·</span>
+      <span>Free Shipping ₹999+</span><span>·</span>
+      <span>Exclusive Drops</span><span>·</span>
+      <span>New Arrivals</span><span>·</span>
+      <span>Sustainable Fashion</span><span>·</span>
+      <span>Free Shipping ₹999+</span><span>·</span>
+      <span>Exclusive Drops</span><span>·</span>
+      <span>New Arrivals</span><span>·</span>
+      <span>Sustainable Fashion</span><span>·</span>
+      <span>Free Shipping ₹999+</span><span>·</span>
+      <span>Exclusive Drops</span><span>·</span>
+    </div>
+  </div>
+ 
+  <!-- WOMEN'S SECTION -->
+  <section class="products-section" id="women">
+    <div class="section-header">
+      <span class="section-tag">Collection</span>
+      <h2 class="section-title">Women's <em>Fashion</em></h2>
+      <p class="section-desc">Timeless silhouettes, modern sensibility — pieces that move with you.</p>
+    </div>
+    <div class="products-grid" id="womenGrid"></div>
+  </section>
+ 
+  <!-- KIDS SECTION -->
+  <section class="products-section kids-section" id="kids">
+    <div class="section-header">
+      <span class="section-tag">Kids Wear</span>
+      <h2 class="section-title">Little <em>Ones</em></h2>
+      <p class="section-desc">Bright, bold, and built for adventure — clothes as lively as they are.</p>
+    </div>
+    <div class="products-grid" id="kidsGrid"></div>
+  </section>
+ 
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="about-inner">
+      <div class="about-text reveal">
+        <span class="section-tag">Our Story</span>
+        <h2 class="section-title">Fashion with<br><em>Purpose</em></h2>
+        <p>StyleHub was born from a simple belief — that great style shouldn't cost the earth, or your values. We partner with ethical manufacturers across India to bring you fashion that feels as good as it looks.</p>
+        <p>Every piece in our collection is thoughtfully curated for quality, fit, and longevity. We believe in slow fashion: buying better, wearing longer, wasting less.</p>
+        <div class="about-stats">
+          <div class="stat"><span class="stat-n">50K+</span><span class="stat-l">Happy Customers</span></div>
+          <div class="stat"><span class="stat-n">2K+</span><span class="stat-l">Styles Available</span></div>
+          <div class="stat"><span class="stat-n">100%</span><span class="stat-l">Ethical Sourcing</span></div>
+        </div>
+      </div>
+      <div class="about-visual reveal">
+        <div class="about-card ac-big">
+          <div class="ac-inner" style="background:linear-gradient(145deg,#f0e6d9,#d4b896)">
+            <svg viewBox="0 0 200 260" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%">
+              <ellipse cx="100" cy="70" rx="35" ry="35" fill="#9a6f45" opacity=".65"/>
+              <path d="M30 260 Q55 150 100 130 Q145 150 170 260Z" fill="#9a6f45" opacity=".4"/>
+              <path d="M55 155 Q75 140 100 135 Q125 140 145 155 L150 210 Q100 225 50 210Z" fill="#6b4a2a" opacity=".55"/>
+            </svg>
+          </div>
+          <span>Signature Collection</span>
+        </div>
+        <div class="about-card ac-sm">
+          <div class="ac-inner" style="background:linear-gradient(145deg,#dceef7,#93c5de)">
+            <svg viewBox="0 0 140 180" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%">
+              <ellipse cx="70" cy="48" rx="24" ry="24" fill="#2471a3" opacity=".55"/>
+              <path d="M20 180 Q45 120 70 108 Q95 120 120 180Z" fill="#2471a3" opacity=".35"/>
+            </svg>
+          </div>
+          <span>Kids Capsule</span>
+        </div>
+        <div class="about-pill">Handpicked Daily</div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="contact-inner">
+      <div class="contact-text reveal">
+        <span class="section-tag">Get in Touch</span>
+        <h2 class="section-title">We'd Love to<br><em>Hear From You</em></h2>
+        <p>Questions, collaborations, or just want to say hi — our inbox is always open.</p>
+        <ul class="contact-details">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            hello@stylehub.in
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.9v2z"/></svg>
+            +91 98765 43210
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Connaught Place, New Delhi — 110001
+          </li>
+        </ul>
+      </div>
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" placeholder="Aarav" required />
+          </div>
+          <div class="form-field">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="Sharma" required />
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="aarav@email.com" required />
+        </div>
+        <div class="form-field">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" placeholder="Order enquiry / Collaboration…" />
+        </div>
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Tell us what's on your mind…" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary btn-full">Send Message</button>
+        <p class="form-success" id="formSuccess">✓ Message sent! We'll reply within 24 hours.</p>
+      </form>
+    </div>
+  </section>
+ 
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo">Style<span>Hub</span></a>
+        <p>Fashion that tells your story — curated with care, delivered with love.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+          </a>
+          <a href="#" aria-label="Pinterest">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.75 1.23-5.21 1.23-5.21s-.31-.63-.31-1.57c0-1.47.85-2.57 1.91-2.57.9 0 1.34.68 1.34 1.49 0 .91-.58 2.27-.88 3.53-.25 1.05.52 1.91 1.56 1.91 1.87 0 3.13-2.4 3.13-5.24 0-2.16-1.46-3.77-4.1-3.77-2.99 0-4.85 2.23-4.85 4.72 0 .86.25 1.46.64 1.93.18.21.2.3.14.54-.05.17-.15.59-.19.75-.06.24-.25.33-.45.24-1.25-.51-1.84-1.89-1.84-3.44 0-2.56 2.16-5.64 6.44-5.64 3.45 0 5.73 2.51 5.73 5.2 0 3.57-1.98 6.24-4.9 6.24-.98 0-1.9-.53-2.22-1.12l-.62 2.38c-.22.85-.82 1.91-1.23 2.56.93.28 1.9.43 2.91.43 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#women">Women's Fashion</a></li>
+          <li><a href="#kids">Kids Wear</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Sale</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Returns & Exchanges</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Track Order</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 StyleHub. Made with ♡ in India.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+ 
+  <div class="toast" id="toast"></div>
+ 
+<script src="js/app.js"></script>
+</body>
+</html>
+ 
